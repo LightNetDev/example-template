@@ -32,12 +32,6 @@ All commands are run from the root of the project, from a terminal:
 
 ## 🖥️ Administration UI
 
-Here’s an improved version of your **Administration UI** section—clearer, friendlier, and still concise:
-
----
-
-## 🖥️ Administration UI
-
 This template comes with a preconfigured admin interface to manage your content easily.
 
 To run it locally:
