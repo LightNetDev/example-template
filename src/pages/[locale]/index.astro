@@ -2,20 +2,20 @@
 /**
  * Provide the paths for the supported locales (site languages).
  */
-export { getLocalePaths as getStaticPaths } from "lightnet/i18n"
+export { getLocalePaths as getStaticPaths } from "lightnet/i18n";
 
-import { AstroError } from "astro/errors"
-import { getEntry } from "astro:content"
+import { AstroError } from "astro/errors";
+import { getEntry } from "astro:content";
 import {
   HeroSection,
   HighlightSection,
   MediaGallerySection,
   Page,
-} from "lightnet/components"
-import { getMediaItems } from "lightnet/content"
+} from "lightnet/components";
+import { getMediaItems } from "lightnet/content";
 
-import eventImage from "../../assets/event.webp"
-import heroImage from "../../assets/hero.webp"
+import eventImage from "../../assets/event.webp";
+import heroImage from "../../assets/hero.webp";
 
 /**
  * Fetch the latest books.
@@ -24,33 +24,33 @@ import heroImage from "../../assets/hero.webp"
 const latestBooks = await getMediaItems({
   where: { type: "book" },
   orderBy: "dateCreated",
-})
+});
 
 /**
  * Fetch the learn skateboarding collection meta data.
  */
 const learnSkateboarding = await getEntry(
   "media-collections",
-  "learn-skateboarding",
-)
+  "learn-skateboarding"
+);
 /**
  * If the learn skateboarding collection does not exist, throw an error.
  */
 if (!learnSkateboarding) {
-  throw new AstroError("Media Collection 'learn-skateboarding' not found")
+  throw new AstroError("Media Collection 'learn-skateboarding' not found");
 }
 /**
  * Fetch the items of the learn skateboarding collection.
  */
 const learnSkateboardingItems = await getMediaItems({
   where: { collection: "learn-skateboarding" },
-})
+});
 
 /**
  * Reference the translation function to avoid
  * having to write Astro.locals.i18n.t every time.
  */
-const t = Astro.locals.i18n.t
+const t = Astro.locals.i18n.t;
 ---
 
 {
@@ -63,7 +63,7 @@ const t = Astro.locals.i18n.t
   {
     /* 
     The hero section is the big image of two skateboarders at the top of the page.
-    Also it shows the ministry name (Sk8 Ministries) and slogan (Living faith, building 
+    Also it shows the ministry name (SkateNet) and slogan (Living faith, building 
     community).
 
     The both text are translated to the current locale using the i18n.t function.

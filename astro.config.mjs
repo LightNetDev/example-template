@@ -1,7 +1,7 @@
 // @ts-check
-import lightnetDecapAdmin from "@lightnet/decap-admin"
-import { defineConfig } from "astro/config"
-import lightnet from "lightnet"
+import lightnetDecapAdmin from "@lightnet/decap-admin";
+import { defineConfig } from "astro/config";
+import lightnet from "lightnet";
 
 /**
  * Defines the available languages for the site, covering both
@@ -20,14 +20,15 @@ const languages = [
     label: "Deutsch", // Display name for German
     isSiteLanguage: true, // Sets German as an site language
   },
-]
+];
 
 export default defineConfig({
   /**
    * Base URL of your website. This is used for tasks like identifying
    * external links and generating absolute URLs.
    */
-  site: "https://sk8-ministries.pages.dev",
+  // TODO: change this to your site's domain address
+  site: "https://example-template.pages.dev",
 
   integrations: [
     /**
@@ -118,4 +119,4 @@ export default defineConfig({
       languages: languages,
     }),
   ],
-})
+});
