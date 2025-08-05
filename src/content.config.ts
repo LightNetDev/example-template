@@ -3,15 +3,21 @@ import { LIGHTNET_COLLECTIONS } from "lightnet/content"
 /**
  * Astro Content Collections Configuration for LightNet.
  *
- * This file defines the content collections for your LightNet project,
- * using the default collection presets provided by the LightNet.
+ * This file defines the content collections used in your LightNet project,
+ * leveraging the built-in `LIGHTNET_COLLECTIONS` preset provided by LightNet.
  *
- * Content collections in Astro are used to structure and organize various types
- * of content in your project, such as pages, posts, or media items. By using the
- * `LIGHTNET_COLLECTIONS` preset, you ensure that your content collections are
- * configured for LightNet's features.
+ * Content collections in Astro provide a schema-based way to structure and manage
+ * different types of content — such as pages, posts, media, or configuration entries.
+ * By using the LightNet preset, your project gains access to preconfigured collections
+ * optimized for LightNet's features (e.g., localization and content validation).
  *
- * If needed, you can extend or override the default collection definitions
- * by creating a custom collections object.
+ * ✅ Recommended: Use the preset for quick setup and best practices.
+ * 🔧 Optional: If you need custom content types or want to modify validation schemas,
+ *              you can override or extend the default configuration by defining your
+ *              own `collections` object following Astro's `defineCollection` API.
+ *
+ * Docs:
+ * - Astro Content Collections: https://docs.astro.build/en/guides/content-collections/
+ * - LightNet Schema Extensions: https://docs.lightnet.community/content/fundamentals/
  */
-export const collections = LIGHTNET_COLLECTIONS
+export const collections = LIGHTNET_COLLECTIONS;

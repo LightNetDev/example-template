@@ -1,6 +1,9 @@
 ---
 /**
- * Provide the paths for the supported locales (site languages).
+ * Exports LightNet's `getLocalePaths` as Astro's required `getStaticPaths`.
+ * This ensures that pages under `[locale]/` are generated for every site
+ * language configured in LightNet. Without this, localized routes would
+ * not be built at compile time.
  */
 export { getLocalePaths as getStaticPaths } from "lightnet/i18n";
 
@@ -18,8 +21,11 @@ import eventImage from "../../assets/event.webp";
 import heroImage from "../../assets/hero.webp";
 
 /**
- * Fetch the latest books.
- * Order them by the date they were created.
+ * Fetches the latest media items of type "book".
+ *
+ * Retrieves all items where `type` is set to "book", ordered by their
+ * `dateCreated` field in descending order — ensuring the most recently
+ * added books appear first.
  */
 const latestBooks = await getMediaItems({
   where: { type: "book" },
@@ -27,46 +33,60 @@ const latestBooks = await getMediaItems({
 });
 
 /**
- * Fetch the learn skateboarding collection meta data.
+ * Fetch metadata for the "learn-skateboarding" media collection.
+ *
+ * This includes details such as the title defined in the media-collection entry.
  */
 const learnSkateboarding = await getEntry(
   "media-collections",
   "learn-skateboarding"
 );
+
 /**
- * If the learn skateboarding collection does not exist, throw an error.
+ * If the "learn-skateboarding" collection is not found, throw a descriptive error.
+ *
+ * This helps prevent rendering issues and allows for graceful error handling.
  */
 if (!learnSkateboarding) {
   throw new AstroError("Media Collection 'learn-skateboarding' not found");
 }
+
 /**
- * Fetch the items of the learn skateboarding collection.
+ * Fetch all media items belonging to the "learn-skateboarding" collection.
  */
 const learnSkateboardingItems = await getMediaItems({
   where: { collection: "learn-skateboarding" },
 });
 
 /**
- * Reference the translation function to avoid
- * having to write Astro.locals.i18n.t every time.
+ * Shorthand reference to the translation function.
+ * Avoids repeatedly accessing `Astro.locals.i18n.t`.
  */
 const t = Astro.locals.i18n.t;
 ---
 
 {
-  /* 
-  Render a lightnet page. This will automatically include the
-  page structure, header, menu system...
+  /*
+   * Renders the LightNet page layout.
+   * Automatically includes the global site structure—such as the header,
+   * navigation menu and other shared UI components.
+   *
+   * TODO: Populate this homepage with your own content components, sections,
+   *       and any dynamic data you'd like to feature.
    */
 }
 <Page>
   {
-    /* 
-    The hero section is the big image of two skateboarders at the top of the page.
-    Also it shows the ministry name (SkateNet) and slogan (Living faith, building 
-    community).
-
-    The both text are translated to the current locale using the i18n.t function.
+    /*
+     * The hero section is the large banner at the top of the page,
+     * featuring an image of two skateboarders, along with the ministry
+     * name (SkateNet) and the slogan ("Living faith, building community").
+     *
+     * Both text elements (title and subtitle) are localized using the `i18n.t` function,
+     * adapting to the current site language.
+     *
+     * TODO: Adjust `titleSize` and `subtitleSize` as needed to fit your translated values,
+     * especially if your titles are significantly longer or shorter than the default.
      */
   }
   <HeroSection
@@ -79,8 +99,14 @@ const t = Astro.locals.i18n.t;
   />
 
   {
-    /* 
-    This section shows the latest books that have been added to the library.
+    /*
+     * Displays a section showcasing the most recently added books in the library.
+     *
+     * The section title is localized using `Astro.locals.i18n.t`, and the layout is optimized
+     * for presenting book-style media items.
+     *
+     * Note: `latestBooks` is a variable fetched in the frontmatter (using getMediaItems)
+     * and passed into this component to render the latest content.
      */
   }
   <MediaGallerySection
@@ -90,9 +116,15 @@ const t = Astro.locals.i18n.t;
   />
 
   {
-    /* 
-    This section shows the BBQ event. It includes an image, a title, some description text and a link
-    to sign up for the event.
+    /*
+     * Renders a highlight section promoting the upcoming BBQ event.
+     *
+     * This section includes:
+     * - An image representing the event.
+     * - A localized title and description.
+     * - A call-to-action link that allows users to sign up (via email).
+     *
+     * All text content is localized using `Astro.locals.i18n.t`.
      */
   }
   <HighlightSection
@@ -106,12 +138,17 @@ const t = Astro.locals.i18n.t;
   />
 
   {
-    /* 
-    This section shows the learn skateboarding collection. It uses the collection name as the title.
+    /*
+     * Renders a media gallery section for the "Learn Skateboarding" collection.
+     *
+     * The section title is dynamically set using the collection's `label` field.
+     *
+     * The gallery displays media items using the "video" layout,
+     * suitable for tutorial or educational content.
      */
   }
   <MediaGallerySection
-    title={learnSkateboarding.data.label}
+    title={t(learnSkateboarding.data.label)}
     items={learnSkateboardingItems}
     layout="video"
   />
