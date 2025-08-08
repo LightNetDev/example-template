@@ -72,8 +72,7 @@ const t = Astro.locals.i18n.t;
    * Automatically includes the global site structure—such as the header,
    * navigation menu and other shared UI components.
    *
-   * TODO: Populate this homepage with your own content components, sections,
-   *       and any dynamic data you'd like to feature.
+   * TODO: Populate this homepage with your own content components and sections.
    */
 }
 <Page>
@@ -138,6 +137,20 @@ const t = Astro.locals.i18n.t;
     }}
   />
 
+  {
+    /*
+     * Show a carousel of all categories referenced by media items.
+     *
+     * Clicking a category → navigates to the Search page with that category
+     * set as a filter.
+     *
+     * The section title → links to the locale-specific Categories overview page:
+     *   /{Astro.currentLocale}/categories
+     *
+     * The Categories overview page is implemented in `categories.astro`
+     * (located next to this file).
+     */
+  }
   <CategoriesSection titleHref={`/${Astro.currentLocale}/categories`} />
 
   {
