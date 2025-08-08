@@ -64,6 +64,7 @@ export default defineConfig({
        * You can specify multiple formats (e.g., .ico, .png, .svg) for better compatibility across browsers and devices.
        *
        * TODO: Add your favicon files to the /public directory and update the references below.
+       *       Learn more on: https://docs.lightnet.community/build/configuration/set-favicon/
        */
       favicon: [
         { href: "favicon.svg" }, // SVG format (scales well on modern browsers)
