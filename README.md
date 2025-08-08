@@ -1,3 +1,5 @@
+<!-- TODO: update the content of this readme to match your site -->
+
 # 🛹 Example Template
 
 A beginner-friendly LightNet starter for developers, using a fictional skateboard ministry as a demo site. Learn how LightNet works, explore best practices,
