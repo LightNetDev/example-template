@@ -54,4 +54,4 @@ Take a look at the [LightNet developer docs](https://docs.lightnet.community).
 
 ## 📄 License
 
-This template is shared under the [MIT License](LICENSE) — you're welcome to reuse it, tweak it, or even remove the license if you're building something new from it. Make it yours!
+This template is shared under the [MIT-0 License](LICENSE) — you're welcome to reuse it, tweak it, or even remove the license. Make it yours!
