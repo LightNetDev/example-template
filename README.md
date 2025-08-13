@@ -2,7 +2,7 @@
 
 # 🛹 Example Template
 
-A beginner-friendly LightNet starter for developers, using a fictional skateboard ministry as a demo site. Learn how LightNet works, explore best practices,
+A beginner-friendly LightNet starter for developers, using a fictional skateboard ministry as a demonstration site. Learn how LightNet works, explore best practices,
 and build your own media library from this example.
 
 🔗 **Live Preview**: [https://example-template.pages.dev](https://example-template.pages.dev)
