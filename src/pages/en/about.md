@@ -20,7 +20,7 @@ RECOMMENDED CONTENT SECTIONS:
 TIP: Keep the tone consistent with the rest of your site.
 -->
 
-Welcome to our SkateNet example site! This is a demonstration of LightNet, a tool designed to help build Christian media library websites.  
+Welcome to our SkateNet example site! This is a demonstration of [LightNet](https://lightnet.community), a tool designed to help build Christian media library websites.  
 Please note: This ministry is fictional and created solely to showcase LightNet’s features.
 
 <!--

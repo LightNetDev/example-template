@@ -20,7 +20,7 @@ RECOMMENDED CONTENT SECTIONS:
 TIP: Keep the tone consistent with the rest of your site.
 -->
 
-Willkommen auf unserer Beispielseite zum Thema Skateboarding! Dies ist eine Demonstration der LightNet-Bibliothek, einem Werkzeug, das den Aufbau von Websites für christliche Mediatheken unterstützt. Bitte beachten Sie, dass SkateNet fiktiv ist und nur erstellt wurde, um die Funktionen von LightNet zu präsentieren.
+Willkommen auf unserer Beispielseite zum Thema Skateboarding! Dies ist eine Demonstration der [LightNet-Bibliothek](https://lightnet.community), einem Werkzeug, das den Aufbau von Websites für christliche Mediatheken unterstützt. Bitte beachten Sie, dass SkateNet fiktiv ist und nur erstellt wurde, um die Funktionen von LightNet zu präsentieren.
 
 <!--
 IMAGE GUIDELINES:
