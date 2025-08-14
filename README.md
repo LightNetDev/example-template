@@ -28,27 +28,10 @@ All commands are run from the root of the project, from a terminal:
 | `npm run build`   | Build the production site to the `./dist/` folder      |
 | `npm run preview` | Preview the production build locally                   |
 
-## 🖥️ Administration UI
+## 🖥️ Administration UI (Experimental)
 
-This template comes with a preconfigured admin interface to manage your content easily.
-
-To run it locally:
-
-1. In one terminal tab, start the site with:
-
-   ```bash
-   npm run dev
-   ```
-
-2. In a second terminal tab (from the project root), start the admin server:
-
-   ```bash
-   npx decap-server
-   ```
-
-Then open your browser and go to [localhost:4321/admin](http://localhost:4321/admin) to access the admin UI.
-
-> Note: When you "publish" content here, it's only saved to your local disk.
+This template includes a pre-configured experimental Administration UI.
+To start using it, follow the [Getting Started guide](https://docs.lightnet.community/start-here/getting-started/#optional-make-another-modification-using-the-administration-ui) in the developer docs.
 
 ## 👀 Want to learn more?
 
