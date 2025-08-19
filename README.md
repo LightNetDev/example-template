@@ -1,13 +1,13 @@
 <!-- TODO: update the content of this readme to match your site -->
 
-# 🛹 Example Template
+# 🛹 Example template
 
 A beginner-friendly LightNet starter for developers, using a fictional skateboard ministry as a demonstration site. Learn how LightNet works, explore best practices,
 and build your own media library from this example.
 
-🔗 **Live Preview**: [https://example-template.pages.dev](https://example-template.pages.dev)
+🔗 **Live preview**: [https://example-template.pages.dev](https://example-template.pages.dev)
 
-## 🚀 Getting Started
+## 🚀 Getting started
 
 To create a **local copy**, run the following from your terminal:
 
@@ -17,7 +17,7 @@ npm create astro@latest -- --template LightNetDev/example-template
 
 **💡 Tip:** Look for the `TODO` comments in the code — they’ll walk you through the first steps of setting things up and making it your own.
 
-## 📦 Project Commands
+## 📦 Project commands
 
 All commands are run from the root of the project, from a terminal:
 
