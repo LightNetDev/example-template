@@ -100,6 +100,25 @@ const t = Astro.locals.i18n.t;
 
   {
     /*
+     * Show a carousel of all categories referenced by media items.
+     *
+     * Clicking a category → navigates to the Search page with that category
+     * set as a filter.
+     *
+     * The section title → links to the locale-specific Categories overview page:
+     *   /{Astro.currentLocale}/categories
+     *
+     * The Categories overview page is implemented in `categories.astro`
+     * (located next to this file).
+     */
+  }
+  <CategoriesSection
+    titleHref={`/${Astro.currentLocale}/categories`}
+    title={t("x.home.search-by-category")}
+  />
+
+  {
+    /*
      * Displays a section showcasing the most recently added books in the library.
      *
      * The section title is localized using `Astro.locals.i18n.t`, and the layout is optimized
@@ -136,22 +155,6 @@ const t = Astro.locals.i18n.t;
       text: t("x.home.bbq.sign-up-now"),
     }}
   />
-
-  {
-    /*
-     * Show a carousel of all categories referenced by media items.
-     *
-     * Clicking a category → navigates to the Search page with that category
-     * set as a filter.
-     *
-     * The section title → links to the locale-specific Categories overview page:
-     *   /{Astro.currentLocale}/categories
-     *
-     * The Categories overview page is implemented in `categories.astro`
-     * (located next to this file).
-     */
-  }
-  <CategoriesSection titleHref={`/${Astro.currentLocale}/categories`} />
 
   {
     /*

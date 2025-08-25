@@ -121,7 +121,7 @@ export default defineConfig({
     }),
 
     /**
-     * Configuration for LightNet Decap Admin integration.
+     * Configuration for LightNet's experimental Decap Admin integration.
      * Enables a user-friendly administration user interface for managing content via Git-based workflows.
      *
      * TODO: Connect this to your GitLab or GitHub backend by providing the appropriate backend configuration.
