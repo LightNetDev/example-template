@@ -30,11 +30,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run build`   | Build the production site to the `./dist/` folder      |
 | `npm run preview` | Preview the production build locally                   |
 
-## 🖥️ Administration UI (Experimental)
-
-This template includes a pre-configured experimental Administration UI.
-To start using it, follow the [developer docs](https://docs.lightnet.community/start-here/getting-started/#optional-make-another-modification-using-the-administration-ui).
-
 ## 👀 Want to learn more?
 
 Take a look at the [LightNet developer docs](https://docs.lightnet.community).
