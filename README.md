@@ -33,7 +33,7 @@ All commands are run from the root of the project, from a terminal:
 ## 🖥️ Administration UI (Experimental)
 
 This template includes a pre-configured experimental Administration UI.
-To start using it, follow the [Getting Started guide](https://docs.lightnet.community/start-here/getting-started/#optional-make-another-modification-using-the-administration-ui) in the developer docs.
+To start using it, follow the [developer docs](https://docs.lightnet.community/start-here/getting-started/#optional-make-another-modification-using-the-administration-ui).
 
 ## 👀 Want to learn more?
 
