@@ -118,6 +118,14 @@ export default defineConfig({
          */
         filterByLocale: true,
       },
+
+      /**
+       * Display a "Powered by LightNet" attribution in the footer.
+       *
+       * You can disable this if preferred, though we appreciate leaving it on
+       * to help others discover LightNet.
+       */
+      credits: true,
     }),
 
     /**
