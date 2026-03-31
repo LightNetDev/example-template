@@ -1,4 +1,7 @@
 {
-  "label": "x.category.biographies-and-memoirs",
+  "label": {
+    "en": "Biographies & Memoirs",
+    "de": "Biografien & Lebensgeschiten"
+  },
   "image": "./images/3.webp"
 }

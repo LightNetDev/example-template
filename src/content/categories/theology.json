@@ -1,4 +1,7 @@
 {
-  "label": "x.category.theology",
+  "label": {
+    "en": "Theology",
+    "de": "Theologie"
+  },
   "image": "./images/3.webp"
 }

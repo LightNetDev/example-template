@@ -1,4 +1,7 @@
 {
-  "label": "x.category.ministry-and-evangelism",
+  "label": {
+    "en": "Ministry & Evangelism",
+    "de": "Dienst & Evangelisation"
+  },
   "image": "./images/1.webp"
 }

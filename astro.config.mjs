@@ -1,29 +1,7 @@
 // @ts-check
-import lightnetDecapAdmin from "@lightnet/decap-admin";
+import lightnetSveltiaAdmin from "@lightnet/sveltia-admin";
 import { defineConfig } from "astro/config";
 import lightnet from "lightnet";
-
-/**
- * Defines the supported languages for the site, covering both
- * site (UI) and content languages.
- *
- * TODO: Customize this list to match your community. For each site language,
- * ensure a corresponding translation file exists in `/src/translations` (e.g., `en.yml`, `de.yml`).
- *
- * @type {import('lightnet').Language[]}
- */
-const languages = [
-  {
-    code: "en", // BCP 47 code for English
-    label: "English", // Display name in the language selector
-    isDefaultSiteLanguage: true, // Sets English as the default site language
-  },
-  {
-    code: "de", // BCP 47 code for German
-    label: "Deutsch", // Display name in the language selector
-    isSiteLanguage: true, // Enables German as an available site language
-  },
-];
 
 export default defineConfig({
   /**
@@ -43,7 +21,10 @@ export default defineConfig({
       /**
        * Title of the website. It appears in the browser tab and the header bar.
        */
-      title: "x.site.title",
+      title: {
+        en: "SkateNet",
+        de: "SkateNet",
+      },
 
       /**
        * Path to the logo displayed in the site header.
@@ -55,9 +36,31 @@ export default defineConfig({
       logo: { src: "./src/assets/logo.png" },
 
       /**
-       * Language settings for UI and content.
+       * Defines the supported languages for the site, covering both
+       * site (UI) and content languages.
+       *
+       * TODO: Customize this list to match your community. For each site language,
+       * ensure a corresponding translation file exists in `/src/translations` (e.g., `en.yml`, `de.yml`).
+       *
        */
-      languages: languages,
+      languages: [
+        {
+          code: "en", // BCP 47 code for English
+          label: {
+            en: "English",
+            de: "Englisch",
+          }, // Display name in the language selector
+          isDefaultSiteLanguage: true, // Sets English as the default site language
+        },
+        {
+          code: "de", // BCP 47 code for German
+          label: {
+            en: "German",
+            de: "Deutsch",
+          }, // Display name in the language selector
+          isSiteLanguage: true, // Enables German as an available site language
+        },
+      ],
 
       /**
        * Favicon settings for browser tabs, bookmarks, and shortcuts.
@@ -83,21 +86,30 @@ export default defineConfig({
            * For relative paths, the current locale will be automatically prefixed.
            */
           href: "/",
-          label: "ln.home.title", // Internal i18n key (LightNet translation)
+          label: {
+            en: "Home",
+            de: "Start",
+          },
         },
         {
           /**
            * Link to the media/search page.
            */
           href: "/media",
-          label: "ln.search.title", // Internal i18n key (LightNet translation)
+          label: {
+            en: "Media",
+            de: "Medien",
+          },
         },
         {
           /**
            * Link to a custom About page.
            */
           href: "/about",
-          label: "x.navigation.about", // Custom translation key (defined in translations)
+          label: {
+            en: "About",
+            de: "Uber uns",
+          },
         },
         {
           /**
@@ -105,7 +117,11 @@ export default defineConfig({
            * External links should use absolute URLs and fixed labels (not translatable).
            */
           href: "https://lightnet.community",
-          label: "LightNet", // Static label; not localized
+          label: {
+            en: "LightNet",
+            de: "LightNet",
+          }, // Static label; same across locales
+          requiresLocale: false,
         },
       ],
 
@@ -129,17 +145,11 @@ export default defineConfig({
     }),
 
     /**
-     * Configuration for LightNet's experimental Decap Admin integration.
+     * Configuration for LightNet's experimental Sveltia Admin integration.
      * Enables a user-friendly administration user interface for managing content via Git-based workflows.
      *
      * TODO: Connect this to your GitLab or GitHub backend by providing the appropriate backend configuration.
      */
-    lightnetDecapAdmin({
-      /**
-       * Supported content languages.
-       * This should match the `languages` array defined in your main LightNet config.
-       */
-      languages: languages,
-    }),
+    lightnetSveltiaAdmin({}),
   ],
 });

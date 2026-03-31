@@ -1,4 +1,7 @@
 {
-  "label": "x.category.bibles-and-bible-stories",
+  "label": {
+    "en": "Bibles & Bible Stories",
+    "de": "Bibeln & Bibelgeschichten"
+  },
   "image": "./images/2.webp"
 }

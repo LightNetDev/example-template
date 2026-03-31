@@ -1,4 +1,7 @@
 {
-  "label": "x.category.ethics-and-social-issues",
+  "label": {
+    "en": "Ethics & Social Issues",
+    "de": "Ethik & Soziale Fragen"
+  },
   "image": "./images/4.webp"
 }

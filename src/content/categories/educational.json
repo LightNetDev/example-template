@@ -1,4 +1,7 @@
 {
-  "label": "x.category.educational",
+  "label": {
+    "en": "Educational",
+    "de": "Schulung"
+  },
   "image": "./images/3.webp"
 }

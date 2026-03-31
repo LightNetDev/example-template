@@ -31,6 +31,7 @@ import heroImage from "../../assets/hero.webp";
 const latestBooks = await getMediaItems({
   where: { type: "book" },
   orderBy: "dateCreated",
+  limit: 20,
 });
 
 /**
@@ -40,7 +41,7 @@ const latestBooks = await getMediaItems({
  */
 const learnSkateboarding = await getEntry(
   "media-collections",
-  "learn-skateboarding"
+  "learn-skateboarding",
 );
 
 /**
@@ -60,10 +61,9 @@ const learnSkateboardingItems = await getMediaItems({
 });
 
 /**
- * Shorthand reference to the translation function.
- * Avoids repeatedly accessing `Astro.locals.i18n.t`.
+ * Shorthand references to the current locale and translation helpers.
  */
-const t = Astro.locals.i18n.t;
+const { currentLocale, t, tMap } = Astro.locals.i18n;
 ---
 
 {
@@ -91,8 +91,8 @@ const t = Astro.locals.i18n.t;
   }
   <HeroSection
     image={heroImage}
-    title={t("x.site.title")}
-    subtitle={t("x.ministry.slogan")}
+    title={t("site.title")}
+    subtitle={t("ministry.slogan")}
     titleSize="xl"
     subtitleSize="lg"
     showSearch={true}
@@ -106,15 +106,15 @@ const t = Astro.locals.i18n.t;
      * set as a filter.
      *
      * The section title → links to the locale-specific Categories overview page:
-     *   /{Astro.currentLocale}/categories
+     *   /{currentLocale}/categories
      *
      * The Categories overview page is implemented in `categories.astro`
      * (located next to this file).
      */
   }
   <CategoriesSection
-    titleHref={`/${Astro.currentLocale}/categories`}
-    title={t("x.home.search-by-category")}
+    titleHref={`/${currentLocale}/categories`}
+    title={t("home.search-by-category")}
   />
 
   {
@@ -128,12 +128,7 @@ const t = Astro.locals.i18n.t;
      * and passed into this component to render the latest content.
      */
   }
-  <MediaGallerySection
-    title={t("x.home.our-latest-books")}
-    items={latestBooks}
-    layout="book"
-    viewLayout="carousel"
-  />
+  <MediaGallerySection title={t("home.our-latest-books")} items={latestBooks} />
 
   {
     /*
@@ -149,11 +144,11 @@ const t = Astro.locals.i18n.t;
   }
   <HighlightSection
     image={eventImage}
-    title={t("x.home.bbq.title")}
-    text={t("x.home.bbq.text")}
+    title={t("home.bbq.title")}
+    text={t("home.bbq.text")}
     link={{
       href: "mailto:some-email-address-from-the-ministry",
-      text: t("x.home.bbq.sign-up-now"),
+      text: t("home.bbq.sign-up-now"),
     }}
   />
 
@@ -168,9 +163,9 @@ const t = Astro.locals.i18n.t;
      */
   }
   <MediaGallerySection
-    title={t(learnSkateboarding.data.label)}
+    title={tMap(learnSkateboarding.data.label, {
+      path: ["media-collections", learnSkateboarding.id, "label"],
+    })}
     items={learnSkateboardingItems}
-    layout="video"
-    viewLayout="carousel"
   />
 </Page>

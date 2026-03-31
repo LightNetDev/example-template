@@ -3,13 +3,17 @@
   "title": "Skate Sounds",
   "type": "audio",
   "dateCreated": "2025-04-01",
-  "authors": ["Skateboard Ministries"],
+  "authors": [
+    "Skateboard Ministries"
+  ],
   "content": [
     {
-      "url": "/files/bell-ring.mp3"
+      "url": "/files/bell-ring.mp3",
+      "type": "upload"
     },
     {
-      "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+      "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+      "type": "link"
     }
   ],
   "image": "./images/skate-sounds--en.webp",

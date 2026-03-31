@@ -1,7 +1,11 @@
 {
-  "label": "x.type.video",
+  "label": {
+    "en": "Video",
+    "de": "Video"
+  },
+  "coverImageStyle": "video",
   "detailsPage": {
     "layout": "video"
   },
-  "icon": "mdi--video-outline"
+  "icon": "lucide--video"
 }
