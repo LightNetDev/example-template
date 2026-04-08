@@ -95,8 +95,8 @@ export default defineConfig({
            */
           href: "/media",
           label: {
-            en: "Media",
-            de: "Medien",
+            en: "Search",
+            de: "Suche",
           },
         },
         {
