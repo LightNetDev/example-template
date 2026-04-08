@@ -48,15 +48,13 @@ export default defineConfig({
           code: "en", // BCP 47 code for English
           label: {
             en: "English",
-            de: "Englisch",
           }, // Display name in the language selector
           isDefaultSiteLanguage: true, // Sets English as the default site language
         },
         {
           code: "de", // BCP 47 code for German
           label: {
-            en: "German",
-            de: "Deutsch",
+            en: "Deutsch",
           }, // Display name in the language selector
           isSiteLanguage: true, // Enables German as an available site language
         },
