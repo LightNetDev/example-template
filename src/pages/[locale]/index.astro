@@ -63,7 +63,7 @@ const learnSkateboardingItems = await getMediaItems({
 /**
  * Shorthand references to the current locale and translation helpers.
  */
-const { currentLocale, t, tMap } = Astro.locals.i18n;
+const { currentLocale, t, tContentField } = Astro.locals.i18n;
 ---
 
 {
@@ -163,9 +163,7 @@ const { currentLocale, t, tMap } = Astro.locals.i18n;
      */
   }
   <MediaGallerySection
-    title={tMap(learnSkateboarding.data.label, {
-      path: ["media-collections", learnSkateboarding.id, "label"],
-    })}
+    title={tContentField(learnSkateboarding.data.label, learnSkateboarding)}
     items={learnSkateboardingItems}
   />
 </Page>
