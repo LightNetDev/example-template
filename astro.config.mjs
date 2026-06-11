@@ -140,13 +140,31 @@ export default defineConfig({
        * to help others discover LightNet.
        */
       credits: true,
+      /**
+       * Add a footer with copyright statement and link to about page.
+       *
+       * You can use `{{year}}` to insert the current year during the build.
+       */
+      footerText: {
+        en: "© {{year}} Sk8 Ministries",
+        de: "© {{year}} Sk8 Ministries",
+      },
+      footerLinks: [
+        {
+          href: "/about",
+          label: {
+            en: "About",
+            de: "Über uns",
+          },
+        },
+      ],
     }),
 
     /**
      * Configuration for LightNet's experimental Sveltia Admin integration.
      * Enables a user-friendly administration user interface for managing content via Git-based workflows.
      *
-     * TODO: Connect this to your GitLab or GitHub backend by providing the appropriate backend configuration.
+     * TODO: For online editing, connect this to your GitHub repository by providing the appropriate backend configuration.
      */
     lightnetSveltiaAdmin({}),
   ],
