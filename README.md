@@ -17,6 +17,10 @@ pnpm create astro@latest -- --template LightNetDev/example-template
 
 **💡 Tip:** Look for the `TODO` comments in the code — they’ll walk you through the first steps of setting things up and making it your own.
 
+Alternatively you can **directly deploy** this template to Cloudflare Workers:
+
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/LightNetDev/example-template)
+
 For more help on starting with this template, check out the [getting started guide](https://docs.lightnet.community/start-here/getting-started/).
 
 ## 📦 Project commands
