@@ -9,13 +9,13 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "packageManager": "pnpm@11.5.2",
+  "packageManager": "pnpm@11.6.0",
   "dependencies": {
     "@astrojs/check": "^0.9.9",
     "@astrojs/react": "^5.0.7",
-    "@lightnet/sveltia-admin": "^4.0.9",
-    "astro": "^6.4.4",
-    "lightnet": "^4.2.1",
+    "@lightnet/sveltia-admin": "^4.0.10",
+    "astro": "^6.4.6",
+    "lightnet": "^4.4.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "sharp": "^0.34.5",
