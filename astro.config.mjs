@@ -146,8 +146,8 @@ export default defineConfig({
        * You can use `{{year}}` to insert the current year during the build.
        */
       footerText: {
-        en: "© Sk8 Ministries",
-        de: "© Sk8 Ministries",
+        en: "© {{year}} Sk8 Ministries",
+        de: "© {{year}} Sk8 Ministries",
       },
       footerLinks: [
         {
