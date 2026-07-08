@@ -12,7 +12,7 @@ and build your own media library from this example.
 To create a **local copy**, run the following from your terminal:
 
 ```sh
-pnpm create astro@latest -- --template LightNetDev/example-template
+pnpm create astro@latest --template LightNetDev/example-template
 ```
 
 **💡 Tip:** Look for the `TODO` comments in the code — they’ll walk you through the first steps of setting things up and making it your own.
