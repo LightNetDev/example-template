@@ -8,9 +8,9 @@ export default defineConfig({
    * The base URL of your website. This is used for generating absolute URLs,
    * identifying external links, and ensuring consistent routing behavior.
    *
-   * TODO: Replace with your actual site domain (e.g., https://yourdomain.com)
+   * TODO: Replace with your actual site domain (e.g., https://yourdomain.example)
    */
-  site: "https://example-template.pages.dev",
+  site: "https://yourdomain.example",
 
   integrations: [
     /**

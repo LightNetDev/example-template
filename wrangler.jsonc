@@ -8,9 +8,10 @@
     "directory": "./dist",
     "not_found_handling": "404-page"
   }
+  // ,
   // "routes": [
   //   {
-  //     "pattern": "your-site.com",
+  //     "pattern": "yourdomain.example",
   //     "custom_domain": true
   //   }
   // ]
