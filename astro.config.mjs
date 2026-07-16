@@ -8,9 +8,9 @@ export default defineConfig({
    * The base URL of your website. This is used for generating absolute URLs,
    * identifying external links, and ensuring consistent routing behavior.
    *
-   * TODO: Replace with your actual site domain (e.g., https://yourdomain.example)
+   * TODO: Replace with your actual site domain (e.g., https://your-site.example)
    */
-  site: "https://yourdomain.example",
+  site: "https://your-site.example",
 
   integrations: [
     /**
@@ -106,7 +106,7 @@ export default defineConfig({
           href: "/about",
           label: {
             en: "About",
-            de: "Uber uns",
+            de: "Über uns",
           },
         },
         {
