@@ -15,7 +15,7 @@
     "@astrojs/react": "^5.0.7",
     "@lightnet/sveltia-admin": "^4.0.10",
     "astro": "^6.4.6",
-    "lightnet": "^4.4.0",
+    "lightnet": "^4.5.2",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "sharp": "^0.34.5",
