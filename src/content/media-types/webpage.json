@@ -3,6 +3,7 @@
     "en": "Web page",
     "de": "Webseite"
   },
+  "schemaType": "WebPage",
   "detailsPage": {
     "layout": "default",
     "openActionLabel": {

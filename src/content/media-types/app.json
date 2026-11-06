@@ -3,6 +3,7 @@
     "en": "App",
     "de": "App"
   },
+  "schemaType": "SoftwareApplication",
   "detailsPage": {
     "layout": "default"
   },

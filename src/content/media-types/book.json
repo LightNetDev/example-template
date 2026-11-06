@@ -3,6 +3,7 @@
     "en": "Book",
     "de": "Buch"
   },
+  "schemaType": "Book",
   "detailsPage": {
     "layout": "default",
     "openActionLabel": {

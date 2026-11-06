@@ -9,15 +9,15 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "packageManager": "pnpm@12.10.1",
+  "packageManager": "pnpm@12.18.0",
   "dependencies": {
-    "@astrojs/check": "^0.9.10",
+    "@astrojs/check": "^0.9.12",
     "@astrojs/react": "^5.0.7",
-    "@lightnet/sveltia-admin": "^4.2.2",
+    "@lightnet/sveltia-admin": "^4.4.1",
     "astro": "^6.4.8",
-    "lightnet": "^4.6.1",
-    "react": "^19.3.0",
-    "react-dom": "^19.3.0",
+    "lightnet": "^4.11.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "sharp": "^0.34.5",
     "tailwindcss": "^3.4.19",
     "typescript": "^6.0.3"

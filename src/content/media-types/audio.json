@@ -3,6 +3,7 @@
     "en": "Audio",
     "de": "Audio"
   },
+  "schemaType": "AudioObject",
   "detailsPage": {
     "layout": "audio"
   },

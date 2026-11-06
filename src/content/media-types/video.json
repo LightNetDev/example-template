@@ -3,6 +3,7 @@
     "en": "Video",
     "de": "Video"
   },
+  "schemaType": "VideoObject",
   "coverImageStyle": "video",
   "detailsPage": {
     "layout": "video"
